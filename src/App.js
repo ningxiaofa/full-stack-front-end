@@ -1,8 +1,21 @@
+import React from 'react'
+import {
+  HashRouter as Router,
+} from 'react-router-dom'
+
+import Nav from './components/nav'
+import AppRouter from './appRouter'
+
 function App() {
   return (
-    <div className="App">
-      Hello React!
-    </div>
+    <Router>
+      <div className="App">
+        {/* Navigation */}
+        <Nav />
+        {/* Routing matching rules */}
+        <AppRouter />
+      </div>
+    </Router>
   );
 }
 

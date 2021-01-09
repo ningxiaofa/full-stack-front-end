@@ -2,7 +2,24 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project operation process
+
+### `1.Install scaffolding tools`
+npm i -g create-react-app
+
+### `2.Create project`
+create-react-app full-stack-front-end
+
+### `3.enter project`
+cd full-stack-front-end
+
+### `4.Pull config`
+yarn eject
+
+### `5.Enjoying hacking`
+...
+
+## Available Scripts ------------------------------------------ I'm devider
 
 In the project directory, you can run:
 
