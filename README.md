@@ -13,7 +13,7 @@ create-react-app full-stack-front-end
 ### `3.enter project`
 cd full-stack-front-end
 
-### `4.Pull config`
+### `4.Pull config`  --- Just skip
 yarn eject
 
 ### `5.Enjoying hacking`
