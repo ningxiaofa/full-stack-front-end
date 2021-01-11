@@ -6,7 +6,7 @@ export default function Register(props) {
   //   console.log(props);
   const formProps = {
     name: "Sign up",
-    hasRememberBox: false,
+    hasRemember: false,
     getParamsCallback: function (obj) {
       console.log(obj);
       // 思路:

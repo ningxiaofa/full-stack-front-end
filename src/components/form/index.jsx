@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 import "./style.css";
 
-export default function Form({ name, hasRememberBox, getParamsCallback }) {
+export default function Form({ name, hasRemember, getParamsCallback }) {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+  const checkboxRef = useRef(null)
 
   const validateEmail = (value) => {
     if (!/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/.test(value)) {
@@ -52,12 +53,12 @@ export default function Form({ name, hasRememberBox, getParamsCallback }) {
           />
         </div>
       </div>
-      {hasRememberBox !== false ? (
+      {hasRemember !== false ? (
         <div className="form-group">
           <div className="col-sm-offset-2 col-sm-10">
             <div className="checkbox">
               <label>
-                <input type="checkbox" /> Remember me
+                <input type="checkbox" ref={checkboxRef} /> Remember me
               </label>
             </div>
           </div>
@@ -81,6 +82,7 @@ export default function Form({ name, hasRememberBox, getParamsCallback }) {
               getParamsCallback({
                 email: emailVal,
                 password: passwordVal,
+                hasRemember: checkboxRef.current?.checked ? true : false
               });
             }}
           >
